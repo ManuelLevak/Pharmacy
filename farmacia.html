@@ -67,69 +67,69 @@
                 </tr>
                 <tr>
                   <td>1</td>
-                  <td> </td>
-                  <td> </td>
-                  <td> </td>
+                  <td id="elemento1_nome"> </td>
+                  <td id="elemento1_quantita"> </td>
+                  <td id="elemento1_minimo"> </td>
                   <td> </td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
+                    <td id="elemento2_nome"> </td>
+                    <td id="elemento_quantita"> </td>
+                    <td id="elemento_minimo"> </td>
                     <td> </td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td> </td>
+                    <td id="elemento3_nome"> </td>
                     <td> </td>
                     <td> </td>
                     <td> </td>
                 </tr><tr>
                     <td>4</td>
-                    <td> </td>
+                    <td id="elemento4_nome"> </td>
                     <td> </td>
                     <td> </td>
                     <td> </td>
                 </tr>
                 <tr>
                     <td>5</td>
-                    <td> </td>
+                    <td id="elemento5_nome"> </td>
                     <td> </td>
                     <td> </td>
                     <td> </td>
                 </tr>
                 <tr>
                     <td>6</td>
-                    <td> </td>
+                    <td id="elemento6_nome"> </td>
                     <td> </td>
                     <td> </td>
                     <td> </td>
                 </tr>
                 <tr>
                     <td>7</td>
-                    <td> </td>
+                    <td id="elemento7_nome"> </td>
                     <td> </td>
                     <td> </td>
                     <td> </td>
                 </tr>
                 <tr>
                     <td>8</td>
-                    <td> </td>
+                    <td id="elemento8_nome"> </td>
                     <td> </td>
                     <td> </td>
                     <td> </td>
                 </tr>
                 <tr>
                     <td>9</td>
-                    <td> </td>
+                    <td id="elemento9_nome"> </td>
                     <td> </td>
                     <td> </td>
                     <td> </td>
                 </tr>
                 <tr>
                     <td>10</td>
-                    <td> </td>
+                    <td id="elemento10_nome"> </td>
                     <td> </td>
                     <td> </td>
                     <td> </td>
@@ -231,6 +231,27 @@
       
         <!-- Template Main JS File -->
         <script src="js/main.js"></script>
+
+        <script>
+          fetch('https://pirole-default-rtdb.europe-west1.firebasedatabase.app/Pharmacy.json', {
+          method: 'GET',
+          headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+          }
+      })
+      .then(response => {
+        return response.json();
+      })
+      .then(response => {
+      
+        document.getElementById("elemento1_nome").innerHTML = response['Adrenalina']['nome'];
+        document.getElementById("elemento1_quantita").innerHTML = response['Adrenalina']['quantita'];
+        document.getElementById("elemento1_minimo").innerHTML = response['Adrenalina']['minimo'];
+      
+        console.log(JSON.stringify(response));
+      })
+        </script>
       
       </body>
       
