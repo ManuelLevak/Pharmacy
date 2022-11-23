@@ -123,6 +123,10 @@
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <div id="test"></div>
+  <div id="test2"></div>
+  <div id="test3"></div>
+
   <!-- Vendor JS Files -->
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/glightbox/js/glightbox.min.js"></script>
@@ -132,6 +136,30 @@
 
   <!-- Template Main JS File -->
   <script src="js/main.js"></script>
+
+  <script>
+    fetch('https://pirole-default-rtdb.europe-west1.firebasedatabase.app/Pharmacy.json', {
+    method: 'GET',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    }
+})
+.then(response => {
+  return response.json();
+})
+.then(response => {
+
+
+
+  document.getElementById('test').innerHTML = response['Adrenalina']['nome'];
+  document.getElementById('test2').innerHTML = response['Adrenalina']['minimo'];
+  document.getElementById('test3').innerHTML = response['Adrenalina']['quantita'];
+
+  
+  console.log(JSON.stringify(response));
+})
+  </script>
 
 </body>
 
