@@ -101,7 +101,8 @@
             <h4>Our Newsletter</h4>
             <p>Iscriviti alla nostra Newsletter</p>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email">
+              <input type="submit" value="Subscribe">
             </form>
 
           </div>
@@ -136,30 +137,6 @@
 
   <!-- Template Main JS File -->
   <script src="js/main.js"></script>
-
-  <script>
-    fetch('https://pirole-default-rtdb.europe-west1.firebasedatabase.app/Pharmacy.json', {
-    method: 'GET',
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-    }
-})
-.then(response => {
-  return response.json();
-})
-.then(response => {
-
-
-
-  document.getElementById('test').innerHTML = response['Adrenalina']['nome'];
-  document.getElementById('test2').innerHTML = response['Adrenalina']['minimo'];
-  document.getElementById('test3').innerHTML = response['Adrenalina']['quantita'];
-
-  
-  console.log(JSON.stringify(response));
-})
-  </script>
 
 </body>
 

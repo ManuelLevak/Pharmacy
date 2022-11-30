@@ -387,7 +387,7 @@ table, th, td {
 body {
 	margin: 0;
 	font-family: Roboto, -apple-system, 'Helvetica Neue', 'Segoe UI', Arial, sans-serif;
-	background: #180148;
+	background: url("../img/home2.jpg") top center;
 }
 
 .forms-section {
@@ -400,7 +400,7 @@ body {
 .section-title {
 	font-size: 32px;
 	letter-spacing: 1px;
-	color: #fff;
+	color: black;
 }
 
 .forms {
@@ -455,12 +455,12 @@ body {
 }
 
 .form-wrapper.is-active .switcher-login {
-	color: #fff;
+	color: #999;
 	transform: translateX(90px);
 }
 
 .form-wrapper.is-active .switcher-signup {
-	color: #fff;
+	color: #999;
 	transform: translateX(-90px);
 }
 
@@ -652,15 +652,15 @@ body {
 }
 
 .btn-login {
-	color: #fbfdff;
-	background: #a7e245;
+	color: white;
+	background: #1977cc;
 	transform: translateX(-30%);
 }
 
 .btn-signup {
-	color: #a7e245;
-	background: #fbfdff;
-	box-shadow: inset 0 0 0 2px #a7e245;
+	color: white;
+	background: #1977cc;
+	box-shadow: inset 0 0 0 2px #1977cc;
 	transform: translateX(30%);
 }
 
@@ -785,6 +785,8 @@ body {
   right: -1px;
   bottom: -1px;
   border: 0;
+  width: calc(100% - 250px);
+  height: 50px;
   background: none;
   font-size: 16px;
   padding: 0 20px;
@@ -860,11 +862,11 @@ form {
   margin: 30px auto;
 }
 input {
-font: 14px 'Open Sans', sans-serif;
+  font: 14px 'Open Sans', sans-serif;
   border: 2px solid #ccc;
   padding: 6px;
   display: block;
-margin-bottom: 10px;
+  margin-bottom: 10px;
   width: 96%;
 }
 button {
@@ -875,7 +877,7 @@ button {
   cursor: pointer;
   border: none;
   margin-top: 10px;
-text-transform: uppercase;
+  text-transform: uppercase;
 }
 a{
   color:white;
