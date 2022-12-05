@@ -370,10 +370,23 @@ section {
 /*--------------------------------------------------------------
 # Tabella
 --------------------------------------------------------------*/
-table, th, td {
-  border: 1px solid black;
+
+table {
   border-collapse: collapse;
+  margin-top: 5%;
+  width: 50%;
+  height: 30%;
+  text-align: center;
 }
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  color: #2c4964;
+  border-bottom: 1px solid #DDD;
+}
+
+tr:hover {background-color: #D6EEEE;}
 
 /*--------------------------------------------------------------
 # Login
