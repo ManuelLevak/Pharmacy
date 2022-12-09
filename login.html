@@ -1,166 +1,172 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <title>PHARMACY</title>
-  
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <title>PHARMACY</title>
 
-        <!-- Vendor CSS Files -->
-        <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-        <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-        <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-        <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-        <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
-        <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-        <!-- Collegamento al file CSS File -->
-        <link href="css/style.css" rel="stylesheet">
-    </head>
-    <body>
-         <!-- ======= Barra sopra al titolo ======= -->
-        <div id="topbar" class="d-flex align-items-center fixed-top">
-            <div class="container d-flex justify-content-between">
-            <div class="contact-info d-flex align-items-center">
-                <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">ITSVolta@AliManuMartyJames.com</a>
-                <i class="bi bi-phone"></i> +39 040 375 5301
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Collegamento al file CSS File -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ======= Barra sopra al titolo ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">ITSVolta@AliManuMartyJames.com</a>
+        <i class="bi bi-phone"></i> +39 040 375 5301
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">PHARMACY</a></h1>
+
+    </div>
+  </header><!-- End Header -->
+  <br><br><br><br><br>
+  <section class="forms-section">
+    <div class="forms">
+      <div class="form-wrapper is-active">
+        <button type="button" class="switcher switcher-login">
+          Login
+          <span class="underline"></span>
+        </button>
+        <form class="form form-login">
+          <fieldset>
+            <legend>Please, enter your email and password for login.</legend>
+            <div class="input-block">
+              <label for="login-email">E-mail</label>
+              <input id="login-email" type="email" required>
             </div>
-            <div class="d-none d-lg-flex social-links align-items-center">
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a> 
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+            <div class="input-block">
+              <label for="login-password">Password</label>
+              <input id="login-password" type="password" required>
             </div>
+          </fieldset>
+          <button onclick="login()" type="submit" class="btn-login">Login</button>
+        </form>
+      </div>
+      <div class="form-wrapper">
+        <button type="button" class="switcher switcher-signup">
+          Registrati
+          <span class="underline"></span>
+        </button>
+        <form class="form form-signup">
+          <fieldset>
+            <legend>Please, enter your email, password and password confirmation for sign up.</legend>
+            <div class="input-block">
+              <label for="signup-text">Nickname</label>
+              <input id="signup-text" type="text" required>
             </div>
+            <div class="input-block">
+              <label for="signup-email">Email</label>
+              <input id="signup-email" type="email" required>
+            </div>
+            <div class="input-block">
+              <label for="signup-password">Password</label>
+              <input id="signup-password" type="password" required>
+            </div>
+            <div class="input-block">
+              <label for="signup-password-confirm">Confirm password</label>
+              <input id="signup-password-confirm" type="password" required>
+            </div>
+          </fieldset>
+          <button onclick="inviaDati()" type="submit" class="btn-signup"><!-- <a href=login.html> -->Registrati<!-- </a> --></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>PHARMACY</h3>
+              <p>
+                SS 14 Km 163,5 <br>
+                34149 Basovizza TS<br><br>
+                <strong>Phone:</strong><br> +39 040 375 5301<br>
+                <strong>Email:</strong> ITSVolta@AliManuMartyJames.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#alice">Alice Crudele</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#martina">Martina Smilovich</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#manuel">Manuel Levak</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#James">Marco James Berni</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Iscriviti alla nostra Newsletter</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
         </div>
+      </div>
+    </div>
 
-        <!-- ======= Header ======= -->
-        <header id="header" class="fixed-top">
-            <div class="container d-flex align-items-center">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Pharmacy</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by Aliexpress2401</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
 
-            <h1 class="logo me-auto"><a href="index.html">PHARMACY</a></h1>
-            
-            </div>
-        </header><!-- End Header -->
-        <br><br><br><br><br>
-        <section class="forms-section">
-            <div class="forms">
-              <div class="form-wrapper is-active">
-                <button type="button" class="switcher switcher-login">
-                  Login
-                  <span class="underline"></span>
-                </button>
-                <form class="form form-login">
-                  <fieldset>
-                    <legend>Please, enter your email and password for login.</legend>
-                    <div class="input-block">
-                      <label for="login-email">E-mail</label>
-                      <input id="login-email" type="email" required>
-                    </div>
-                    <div class="input-block">
-                      <label for="login-password">Password</label>
-                      <input id="login-password" type="password" required>
-                    </div>
-                  </fieldset>
-                  <button type="submit" class="btn-login"><a href="farmacia.html">Login</a></button>
-                </form>
-              </div>
-              <div class="form-wrapper">
-                <button type="button" class="switcher switcher-signup">
-                  Registrati
-                  <span class="underline"></span>
-                </button>
-                <form class="form form-signup">
-                  <fieldset>
-                    <legend>Please, enter your email, password and password confirmation for sign up.</legend>
-                    <div class="input-block">
-                      <label for="signup-text">Nickname</label>
-                      <input id="signup-text" type="text" required>
-                    </div>
-                    <div class="input-block">
-                      <label for="signup-email">Email</label>
-                      <input id="signup-email" type="email" required>
-                    </div>
-                    <div class="input-block">
-                      <label for="signup-password">Password</label>
-                      <input id="signup-password" type="password" required>
-                    </div>
-                    <div class="input-block">
-                      <label for="signup-password-confirm">Confirm password</label>
-                      <input id="signup-password-confirm" type="password" required>
-                    </div>
-                  </fieldset>
-                  <button type="submit" class="btn-signup"><a href=login.html>Registrati</a></button>
-                </form>
-              </div>
-            </div>
-          </section>
-    
-        <!-- ======= Footer ======= -->
-        <footer id="footer">
-            <div class="footer-top">
-            <div class="container">
-                <div class="row">
+</body>
+<script src="js/login.js"></script>
+<script src="js/login2.js"></script>
 
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-info">
-                    <h3>PHARMACY</h3>
-                    <p>
-                        SS 14 Km 163,5 <br>
-                        34149 Basovizza TS<br><br>
-                        <strong>Phone:</strong><br> +39 040 375 5301<br>
-                        <strong>Email:</strong> ITSVolta@AliManuMartyJames.com<br>
-                    </p>
-                    <div class="social-links mt-3">
-                        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>  
-                        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-                    </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-md-6 footer-links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                    <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#alice">Alice Crudele</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#martina">Martina Smilovich</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#manuel">Manuel Levak</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="#James">Marco James Berni</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-6 footer-newsletter">
-                    <h4>Our Newsletter</h4>
-                    <p>Iscriviti alla nostra Newsletter</p>
-                    <form action="" method="post">
-                    <input type="email" name="email"><input type="submit" value="Subscribe">
-                    </form>
-
-                </div>
-
-                </div>
-            </div>
-            </div>
-
-            <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong><span>Pharmacy</span></strong>. All Rights Reserved
-            </div>
-            <div class="credits">
-                Designed by Aliexpress2401</a>
-            </div>
-            </div>
-        </footer><!-- End Footer -->
-
-    </body>
-    <script  src="js/login.js"></script>
 </html>
