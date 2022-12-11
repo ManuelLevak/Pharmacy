@@ -292,7 +292,15 @@ section {
 --------------------------------------------------------------*/
 #home {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
+  background: url("../img/home.jfif") top center;
+  background-size: cover;
+  margin-bottom: -200px;
+}
+
+#homefarmacia {
+  width: 100%;
+  height: 100%;
   background: url("../img/home.jfif") top center;
   background-size: cover;
   margin-bottom: -200px;
@@ -367,26 +375,33 @@ section {
   }
 }
 
+
 /*--------------------------------------------------------------
 # Tabella
 --------------------------------------------------------------*/
 
 table {
+
   border-collapse: collapse;
   margin-top: 5%;
-  width: 50%;
-  height: 30%;
+  width: 75%;
+  height: 80%;
   text-align: center;
+  font-size: 100%;
+  color: #444444;
 }
 
-th, td {
+th, tr, td {
   padding: 8px;
+  width: 75%;
+  height: 100%;
   text-align: center;
   color: #444444;
-  border-bottom: 1px solid #fafafa;
+  border-bottom: 1px solid #444444;
+  
 }
 
-tr:hover {background-color: #fafafa;}
+tr:hover {background-color: #fafafa}
 
 /*--------------------------------------------------------------
 # Login
@@ -677,6 +692,16 @@ body {
 	transform: translateX(30%);
 }
 
+/*--------------------------------------------------------------
+# Acquista
+--------------------------------------------------------------*/
+.inviaAcquisti{
+  bottom: 10%;
+}
+
+#tastoAcquista{
+  top:25%;
+}
 
 /*--------------------------------------------------------------
 # Footer
@@ -782,7 +807,7 @@ body {
   background: #fafafa;
   padding: 6px 10px;
   position: relative;
-  border: 1px solid #fafafa;
+  border: 1px solid #444444;
   border-radius: 4px;
 }
 
@@ -883,14 +908,18 @@ input {
   width: 96%;
 }
 button {
-  font: 14px 'Open Sans', sans-serif;
-  background-color: #4fa4f4;
-  color: #4fa4f4;
-  padding: 6px;
-  cursor: pointer;
-  border: none;
-  margin-top: 10px;
+  font-family: "Raleway", sans-serif;
   text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 35px;
+  margin-top: 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fafafa;
+  background: #4fa4f4;
 }
 a{
   color:#fafafa;

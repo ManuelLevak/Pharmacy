@@ -1,3 +1,4 @@
+
 let num = 0;
 fetch('https://pirole-default-rtdb.europe-west1.firebasedatabase.app/Pharmacy.json', {
   method: 'GET',
