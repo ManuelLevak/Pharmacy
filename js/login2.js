@@ -9,7 +9,7 @@
   }
 
   function ridireziona(){
-    location.href = "farmacia.html";
+    location.href = "/farmacia.html";
   }
 
   function inviaDati() {
@@ -26,7 +26,7 @@
         },
         body: JSON.stringify({
           email: (document.getElementById("signup-email").value),
-          nickname: (document.getElementById("signup-text").value),
+          nickname: (document.getElementById("signup-password").value),
           password: pass1
         })
       }).then((response) => response.json())
@@ -42,30 +42,49 @@
     
   }
 
-//   let email = (document.getElementById("login-email").value);
-//   let password = (document.getElementById("login-password").value);
+  
+  let elencoEmail = new Array();
+  let elencoPassword = new Array();
+  let count = 0;
 
-//   function login() {
-//       fetch('https://pirole-default-rtdb.europe-west1.firebasedatabase.app/Utenti.json', {
-//         method: 'GET',
-//         headers: {
-//           'Accept': 'application/json',
-//           'Content-Type': 'application/json'
-//         }
-//       })
-//         .then(response => {
-//           return response.json();
-//         })
-//         .then(response => {
+  
+      fetch('https://pirole-default-rtdb.europe-west1.firebasedatabase.app/Utenti.json', {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      })
+        .then(response => {
+          return response.json();
+        })
+        .then(response => {
 
-//           Object.keys(response).forEach(function (key) {
-//             let element = response[key];
-//             if (element.email == email) {
-//               alert('Utente trovato');
-//             }
+          Object.keys(response).forEach(function (key) {
+            let element = response[key];
+            //Thread.sleep(3000);
+            elencoEmail[count] = element.email;
+            elencoPassword[count] = element.password;
+            count+=1;
             
+          });
+          console.log(JSON.stringify(response));
+        })
+   
+   function login(){
+    let email = (document.getElementById("login-email").value);
+    let password = (document.getElementById("login-password").value);
 
-//           });
-//           console.log(JSON.stringify(response));
-//         })
-//    }
+    var istrue = false;
+    
+    for (i = 0; i < elencoEmail.length; i++) {
+      if(elencoEmail[i]==email){
+        istrue = true;
+      }
+    } 
+
+    if(istrue){
+      location.href = "farmacia.html";
+      }
+    
+   }

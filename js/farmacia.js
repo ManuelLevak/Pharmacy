@@ -74,6 +74,6 @@ function verifica(pre,number){
   if(number>=(parseInt(document.getElementById(pre).value))){
     return number - (parseInt(document.getElementById(pre).value))
   }else{
-    alert("Non puoi inserire un valore inferiore alla quantità!")
+    alert("Non puoi inserire un valore maggiore alla quantità!")
   }
 }
