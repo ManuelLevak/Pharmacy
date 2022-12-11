@@ -20,11 +20,11 @@ fetch('https://pirole-default-rtdb.europe-west1.firebasedatabase.app/Pharmacy.js
         "</td><td>" + element.nome +
         "</td><td>" + element.quantita +
         "</td><td>" + element.minimo +
-        "</td> <input id=\'acquista" + element.nome + "\' type=\"text\"></td>" +
-        "<button onclick=\"aggiungi(" + "\'acquista" + element.nome + "\'," + element.quantita + ",\'" + Object.keys(response)[num] + "\' )\">rifornimento</button>" +
-        "</td> <input id=\'preleva" + element.nome + "\' type=\"text\"></td>" +
-        "<button onclick=\"togli(" + "\'preleva" + element.nome + "\'," + element.quantita + ",\'" + Object.keys(response)[num] + "\' )\">preleva</button>" +
-        "</tr>";
+        "</td><td> <input class='inputTabella'; id=\'acquista" + element.nome + "\' type=\"text\"></td>" +
+        "</td><td><button class='bottoneTabella'; onclick=\"aggiungi(" + "\'acquista" + element.nome + "\'," + element.quantita + ",\'" + Object.keys(response)[num] + "\' )\">rifornisci</button>" +
+        "</td><td> <input class='inputTabella'; id=\'preleva" + element.nome + "\' type=\"text\"></td>" +
+        "<td><button class='bottoneTabella'; onclick=\"togli(" + "\'preleva" + element.nome + "\'," + element.quantita + ",\'" + Object.keys(response)[num] + "\' )\">preleva</button>" +
+        "</td></tr>";
       num += 1;
     });
 
