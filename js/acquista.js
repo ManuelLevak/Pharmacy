@@ -44,7 +44,7 @@
           }).then((response) => response.json())
             .then((data) => {
               console.log('Success:', data);
-              recuperaId();
+              alert("Nuovo farmaco aggiunto correttamente")
             })
             .catch((error) => {
               console.error('Error:', error);
