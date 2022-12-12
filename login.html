@@ -100,7 +100,7 @@
               <input id="signup-password-confirm" type="password" required>
             </div>
           </fieldset>
-          <button type="submit" id="register-btn" class="btn-signup"><a href=login.html>Registrati</a></button>
+          <button type="submit" id="registerbtn" class="btn-signup"><a href=login.html>Registrati</a></button>
         </form>
       </div>
     </div>
@@ -170,45 +170,45 @@
 
 <script type="module">
   // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth";
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
   const firebaseConfig = {
-    apiKey: "AIzaSyDhuN32m-C9-fU_2fDjG5bBOldGMueoMUg",
-    authDomain: "authentication-98a87.firebaseapp.com",
-    projectId: "authentication-98a87",
-    storageBucket: "authentication-98a87.appspot.com",
-    messagingSenderId: "592684071028",
-    appId: "1:592684071028:web:a7b2d8225ce327862ff921"
-  };
+  apiKey: "AIzaSyDhuN32m-C9-fU_2fDjG5bBOldGMueoMUg",
+  authDomain: "authentication-98a87.firebaseapp.com",
+  databaseURL: "https://authentication-98a87-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "authentication-98a87",
+  storageBucket: "authentication-98a87.appspot.com",
+  messagingSenderId: "592684071028",
+  appId: "1:592684071028:web:a7b2d8225ce327862ff921"
+};
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const auth = getAuth();
 
 
-  register-btn.addEventListener('click', (e) => {
+  registerbtn.addEventListener('click', (e) => {
 
-  var email = document.getElementById("signup-email").value;
-  var password = document.getElementById("signup-password").value;
+    var email = document.getElementById("signup-email").value;
+    var password = document.getElementById("signup-password").value;
 
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Signed in 
-      const user = userCredential.user;
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        alert("Registrazione completata con successo!")
 
-      alert("Registrazione completata con successo!")
-
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      alert(errorMessage);
-    });
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorMessage + errorCode);
+      });
   });
-  </script>
+</script>
 
 </html>
